@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Longman Task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="loader"></div>
+        <div class="content-container">
+            <div class="row header align-items-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-1 speaker" data-key="1">
+                            <img class="img-fluid" src="images/speaker.png">
+                        </div>
+                        <div class="col-10">
+                            <h4 class="">Listen and point.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row page">
+                <div class="col-12 page-container">
+                    <div class="col-11 content">
+                        <div class="words">
+                            <div class="word-one" data-key="2">
+                                <p>hungry</p>
+                            </div>
+                            <div class="word-two" data-key="3">
+                                <p>scared</p>
+                            </div>
+                            <div class="word-three" data-key="4">
+                                <p>thirsty</p>
+                            </div>
+                            <div class="word-four" data-key="5">
+                                <p>tired</p>
+                            </div>
+                            <div class="word-five" data-key="6">
+                                <p>excited</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer">
+                <div class="footer-content col-12">
+                    <div class="row pt-4">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-1 refresh-btn d-flex justify-content-center">
+                            <img src="images/refresh.png">
+                        </div>
+                        <div class="col-4 audio-container d-flex align-items-center">
+                            <div class="audio-btn d-flex align-items-center justify-content-center">
+                                <img class="playimg" src="images/play.png">
+                            </div>
+                            <div class="audio-range d-flex justify-content-center align-items-center">
+                                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <audio data-key="1" src="sounds/listen.mp3"></audio>
+    <audio data-key="2" src="sounds/hungry.mp3"></audio>
+    <audio data-key="3" src="sounds/scared.mp3"></audio>
+    <audio data-key="4" src="sounds/thirsty.mp3"></audio>
+    <audio data-key="5" src="sounds/tired.mp3"></audio>
+    <audio data-key="6" src="sounds/excited.mp3"></audio>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
