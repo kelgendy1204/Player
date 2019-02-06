@@ -99,19 +99,36 @@
         ////////////////////////////////
 
         audioBtn.addEventListener('click', () => {
-            for (let i = 0; i < words.length; i++) {
-                words[i].classList.add('active');
-                audios.forEach(audio => {
-                    audio.pause();
-                    audio.currentTime = 0;
-                    if (words[i].dataset.key === audio.dataset.key) {
-                        audio.play();
-                        audio.addEventListener('ended', () => {
-                            words[i].classList.remove('active');
-                        })
+            for (let i = 0; i < audios.length; i++) {
+                let audio = audios[i];
+                // Reseting every audio
+                audio.pause();
+                audio.currentTime = 0;
+                audio.addEventListener('ended', function() {
+                    // Play every audio on the end of the previous
+                    const nextAudio = audios[i + 1];
+                    if(nextAudio) {
+                        nextAudio.pause();
+                        nextAudio.currentTime = 0;
+                        nextAudio.play();
                     }
-                })
+                });
             }
-        })
+            audios[0].play();
+
+            // for (let i = 0; i < words.length; i++) {
+                // words[i].classList.add('active');
+                // audios.forEach(audio => {
+                    // audio.pause();
+                    // audio.currentTime = 0;
+                    // if (words[i].dataset.key === audio.dataset.key) {
+                        // audio.play();
+                        // audio.addEventListener('ended', () => {
+                            // words[i].classList.remove('active');
+                        // })
+                    // }
+                // })
+            // }
+        });
     }
     playSound();
